@@ -119,8 +119,50 @@ align-self: center;
 .image-wrapper >img{
   width: 100%;
 }
-@media (max-width: 600px) {
+.project-info-wrapper-outer{
+  width: 100%;
+  display: flex;
+  font-family: "helvetica",sans-serif;
+  color: white;
+  background-color: #2b2b2b;
+  padding: 3rem 0;
+  margin-top: -5px;
+}
+.project-info-wrapper-inner{
+  width: 1020px;
+  margin: 0 auto;
+  align-self: center;
+  font-size: 22px;
+  font-weight: normal;
+}
 
+.project-info-wrapper-inner > span{
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bolder;
+  display: inline-block;
+    padding: 2rem 0;
+  color: #00adee;
+}
+.project-info-wrapper-inner > span:hover{
+  color:white;
+}
+@media (max-width: 600px) {
+  
+  
+  .project-info-wrapper-outer{
+    padding: 3rem 1rem;
+    padding-bottom: 3rem;
+    
+  }
+  
+  .project-info-wrapper-inner{
+    font-size: 16px;
+  }
+  .project-info-wrapper-inner h1{
+    letter-spacing: normal;
+    font-weight:100;
+  }
   .text-wrapper{
     margin: 1rem;
     top: 40%;
