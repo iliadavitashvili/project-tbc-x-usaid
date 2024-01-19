@@ -5,7 +5,6 @@
 
 body{
     margin: 0;
-   
     background: linear-gradient(to bottom, red, blue);
     height: 300vh;
 }
@@ -19,8 +18,6 @@ header{
     justify-content: center;
     align-items: center;
     position: fixed;
-
-    
 }
 .header-logo{
     width: 182px;
@@ -66,7 +63,6 @@ header li:hover{
     justify-content: space-between;
     flex-direction: column;
     cursor: pointer;
-    
     display: none;
 }
 
@@ -89,7 +85,6 @@ header li:hover{
         display: flex;
     }
     .header-content-wrapper{
-        /* justify-content: space-around; */
         padding: 0 2rem;
         align-items: center;
     }
