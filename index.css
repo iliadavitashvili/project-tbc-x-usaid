@@ -157,7 +157,8 @@ align-self: center;
   }
   
   .project-info-wrapper-inner{
-    font-size: 16px;
+    font-size: 0.9rem;
+    word-spacing: 0.8;
   }
   .project-info-wrapper-inner h1{
     letter-spacing: normal;
