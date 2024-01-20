@@ -325,7 +325,7 @@ align-self: center;
   .carousel-item{
     min-width: 100%;
   }
-  .carrousel-dots{
+  .carousel-dots{
     bottom: 0;
   }
   .carrousel-wrapper svg{
