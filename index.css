@@ -66,15 +66,30 @@ header li:hover {
   justify-content: space-between;
   flex-direction: column;
   cursor: pointer;
+  transition: 0.3s;
   display: none;
   
 }
+
 .menu-button .line-3 {
   width: 50%;
   margin-left: auto;
 }
 .menu-button .line-1{
-    width: 50%;
+  width: 50%;
+}
+.menu-button .line-2,.menu-button .line-1,.menu-button .line-3{
+  transition: 0.3s;
+  border: none;
+}
+.menu-button:hover .line-3{
+  transform: rotate(-90deg) translateX(2px) translateY(-6px);
+}
+.menu-button:hover .line-1{
+  transform: rotate(-90deg) translateX(-2px) translateY(5px);
+}
+.menu-button:hover{
+  transform: rotate(-45deg);
 }
 
 
@@ -260,6 +275,7 @@ align-self: center;
   .menu-button {
     display: flex;
   }
+  
   .header-content-wrapper {
     padding: 0 2rem;
     align-items: center;
