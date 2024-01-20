@@ -167,10 +167,142 @@
           </div>
         </div>
       </section>
-      <section class="our-courses" >
+      <section class="our-courses">
         <h2>სასწავლო კურსები</h2>
-        <div class="course-wrapper" id="courses-div">
-          
+        <div class="course-wrapper" id="courses-div"></div>
+      </section>
+      <section class="carrousel-wrapper">
+        <h2>პროექტის პარტნიორები</h2>
+        <div
+          id="carousel"
+          class="carousel"
+          onmouseover="pauseCarousel()"
+          onmouseout="resumeCarousel()"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item">
+              <div class="sponsors-slide">
+                <img
+                  src="https://static.wixstatic.com/media/93e8a3_a356bb7d201f4f47870683655e9e4120~mv2.png/v1/fill/w_221,h_67,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%204_2x_edited.png"
+                  alt="Asset 4_2x_edited.png"
+                  width="246"
+                  height="74"
+                  style="
+                    width: 246px;
+                    height: 74px;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                  "
+                  fetchpriority="high"
+                />
+                <img
+                  src="https://static.wixstatic.com/media/93e8a3_eaf33552ffd5463e96a5f776dda00111~mv2.png/v1/fill/w_217,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/White%20horiz.png"
+                  alt="White horiz.png"
+                  width="241"
+                  height="80"
+                  style="
+                    width: 241px;
+                    height: 80px;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                  "
+                  fetchpriority="high"
+                />
+                <img
+                  src="https://static.wixstatic.com/media/93e8a3_ae4ade72135b4c7eaa531290232fe5aa~mv2.png/v1/fill/w_225,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_ae4ade72135b4c7eaa531290232fe5aa~mv2.png"
+                  alt=""
+                  width="250"
+                  height="45"
+                  style="
+                    width: 250px;
+                    height: 45px;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                  "
+                  fetchpriority="high"
+                />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="sponsors-slide">
+                <img
+                  src="https://static.wixstatic.com/media/93e8a3_b595f31239344928802dd7135813e17c~mv2.png/v1/fill/w_186,h_53,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Tegeta%20logo%20geo.png"
+                  alt="Tegeta logo geo.png"
+                  width="248"
+                  height="71"
+                  style="
+                    width: 248px;
+                    height: 71px;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                  "
+                  fetchpriority="high"
+                />
+                <img
+                  src="https://static.wixstatic.com/media/93e8a3_aca86c1c067d4f8585c3c2cb1b0a0178~mv2.png/v1/fill/w_140,h_48,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_aca86c1c067d4f8585c3c2cb1b0a0178~mv2.png"
+                  alt=""
+                  width="187"
+                  height="64"
+                  style="
+                    width: 187px;
+                    height: 64px;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                  "
+                  fetchpriority="high"
+                />
+                <img
+                  src="https://static.wixstatic.com/media/93e8a3_b6ed8fb2602e4670bc83d1fd4a7d9283~mv2.png/v1/fill/w_234,h_71,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MicrosoftTeams-image%20(9).png"
+                  alt="MicrosoftTeams-image (9).png"
+                  width="312"
+                  height="95"
+                  style="
+                    width: 312px;
+                    height: 95px;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                  "
+                  fetchpriority="high"
+                />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="sponsors-slide">
+                <img
+                  src="https://static.wixstatic.com/media/93e8a3_ef7860c1a2854f1c8fc20f867ffa30ab~mv2.png/v1/fill/w_170,h_48,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/UFC%20GEO%20PNG_edited.png"
+                  alt="UFC GEO PNG_edited.png"
+                  width="227"
+                  height="64"
+                  style="
+                    width: 227px;
+                    height: 64px;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                  "
+                  fetchpriority="high"
+                />
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-prev" onclick="changeSlide(-1)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 41">
+              <path d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path>
+            </svg>
+          </button>
+          <button class="carousel-btn carousel-next" onclick="changeSlide(1)">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 21 41"
+              style="rotate: 180deg"
+            >
+              <path d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path>
+            </svg>
+          </button>
+          <div class="carousel-dots">
+            <span class="dot" onclick="changeToDot(0)"></span>
+            <span class="dot" onclick="changeToDot(1)"></span>
+            <span class="dot" onclick="changeToDot(2)"></span>
+          </div>
         </div>
       </section>
     </main>

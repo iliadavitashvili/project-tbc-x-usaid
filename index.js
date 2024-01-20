@@ -88,9 +88,65 @@ let courses = coursesArray.map((course)=>{
   </div>
 </div> `
 }).join(" ")
-
 coursesDiv.innerHTML = courses
+const inner = document.querySelector('.carousel-inner');
+    const items = document.querySelectorAll('.carousel-item');
+    const dots = document.querySelectorAll('.dot');
 
+    let currentIndex = 0;
+    let isPaused = false;
+    let autoAdvanceTimer;
+
+    function updateCarousel() {
+        const itemWidth = items[0].offsetWidth;
+        inner.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+        updateDots();
+    }
+
+    function changeSlide(direction) {
+        currentIndex = (currentIndex + direction + items.length) % items.length;
+        updateCarousel();
+        resetAutoAdvanceTimer();
+    }
+
+    function changeToDot(index) {
+        currentIndex = index;
+        updateCarousel();
+        resetAutoAdvanceTimer();
+    }
+
+    function pauseCarousel() {
+        isPaused = true;
+        clearTimeout(autoAdvanceTimer);
+    }
+
+    function resumeCarousel() {
+        isPaused = false;
+        resetAutoAdvanceTimer();
+    }
+
+    function autoAdvance() {
+        if (!isPaused) {
+            changeSlide(1);
+        }
+    }
+
+    function resetAutoAdvanceTimer() {
+        clearTimeout(autoAdvanceTimer);
+        autoAdvanceTimer = setTimeout(autoAdvance, 3000);
+    }
+
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            if (index === currentIndex) {
+                dot.style.backgroundColor = 'white';
+            } else {
+                dot.style.backgroundColor = 'gray';
+            }
+        });
+    }
+
+    resetAutoAdvanceTimer();
 
 {/* <div class="course">
             <img
