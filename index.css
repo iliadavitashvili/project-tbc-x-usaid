@@ -69,30 +69,30 @@ header li:hover {
   cursor: pointer;
   transition: 0.3s;
   display: none;
-  
 }
 
 .menu-button .line-3 {
   width: 50%;
   margin-left: auto;
 }
-.menu-button .line-1{
+.menu-button .line-1 {
   width: 50%;
 }
-.menu-button .line-2,.menu-button .line-1,.menu-button .line-3{
+.menu-button .line-2,
+.menu-button .line-1,
+.menu-button .line-3 {
   transition: 0.3s;
   border: none;
 }
-.menu-button:hover .line-3{
+.menu-button:hover .line-3 {
   transform: rotate(-90deg) translateX(2px) translateY(-6px);
 }
-.menu-button:hover .line-1{
+.menu-button:hover .line-1 {
   transform: rotate(-90deg) translateX(-2px) translateY(5px);
 }
-.menu-button:hover{
+.menu-button:hover {
   transform: rotate(-45deg);
 }
-
 
 .menu-button > div {
   width: 100%;
@@ -101,30 +101,25 @@ header li:hover {
   background-color: white;
 }
 
-
 /* main  */
-main{
+main {
   padding-top: 100px;
-  
-  
-  
 }
-.project-description{
+.project-description {
   display: flex;
   flex-direction: column;
 }
-.image-wrapper{
+.image-wrapper {
   position: relative;
-width: 100vw; 
-margin: 0 auto;
-/* height: 352px; */
-object-position: top; 
+  width: 100vw;
+  margin: 0 auto;
+  /* height: 352px; */
+  object-position: top;
 
-object-fit: cover;
-align-self: center;
- 
+  object-fit: cover;
+  align-self: center;
 }
-.text-wrapper{
+.text-wrapper {
   font-family: "helvetica";
   position: absolute;
   top: 50%;
@@ -132,21 +127,20 @@ align-self: center;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 1.5rem;
-  
 }
-.image-wrapper >img{
+.image-wrapper > img {
   width: 100%;
 }
-.project-info-wrapper-outer{
+.project-info-wrapper-outer {
   width: 100%;
   display: flex;
-  font-family: "helvetica",sans-serif;
+  font-family: "helvetica", sans-serif;
   color: white;
   background-color: #2b2b2b;
   padding: 3rem 0;
   margin-top: -5px;
 }
-.project-info-wrapper-inner{
+.project-info-wrapper-inner {
   width: 1020px;
   margin: 0 auto;
   align-self: center;
@@ -154,77 +148,75 @@ align-self: center;
   font-weight: normal;
 }
 
-.project-info-wrapper-inner > span{
+.project-info-wrapper-inner > span {
   cursor: pointer;
   transition: 0.3s;
   font-weight: bolder;
   display: inline-block;
-    padding: 2rem 0;
+  padding: 2rem 0;
   color: #00adee;
 }
-.project-info-wrapper-inner > span:hover{
-  color:white;
+.project-info-wrapper-inner > span:hover {
+  color: white;
 }
-.our-courses{
+.our-courses {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   width: 1020px;
 }
-.our-courses > h2{
- color: white;
- font-size: 2.5rem;
- font-weight: 200;
+.our-courses > h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 200;
 }
-.course-wrapper{
+.course-wrapper {
   display: grid;
   /* grid-template-columns: repeat(3,300px); */
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-  grid-template-rows:repeat(3,auto) ;
+  grid-template-rows: repeat(3, auto);
   gap: 2rem;
 }
-.course{
+.course {
   border: 1px solid gray;
   border-radius: 5px;
   height: auto;
-  
 }
-.course img{
+.course img {
   width: 100%;
 }
-.course-details-wrapper{
+.course-details-wrapper {
   display: flex;
   align-items: center;
   gap: 10px;
-  color:#00adee ;
+  color: #00adee;
   transition: 0.3s;
   cursor: pointer;
 }
-.course-details-wrapper:hover{
+.course-details-wrapper:hover {
   color: #0b90c0;
 }
-.course-info-wrapper{
+.course-info-wrapper {
   display: flex;
   margin-left: 1.2rem;
   flex-direction: column;
   justify-content: space-around;
   /* height: calc(100% - 150px); */
 }
-.course-name-wrapper{
+.course-name-wrapper {
   color: white;
-  font-family: "helvetica neue",sans-serif;
+  font-family: "helvetica neue", sans-serif;
   font-weight: bold;
 }
-.course-name-wrapper >h3,.course-name-wrapper >p{
+.course-name-wrapper > h3,
+.course-name-wrapper > p {
   white-space: nowrap;
   font-size: 1rem;
 }
-.course-details-wrapper svg{
+.course-details-wrapper svg {
   padding-top: 5px;
   scale: 1.3;
-  
-  
 }
 
 /* carousel  */
@@ -238,7 +230,7 @@ align-self: center;
 .carousel-inner {
   display: flex;
   transition: transform 0.7s ease-in;
-  max-width:1100px;
+  max-width: 1100px;
   margin: 0 auto;
   align-items: center;
 }
@@ -246,7 +238,7 @@ align-self: center;
 .carousel-item {
   min-width: 2500px;
   /* display: none; */
-  
+
   box-sizing: border-box;
 }
 
@@ -264,7 +256,6 @@ align-self: center;
 .carousel-prev {
   left: 100px;
   top: -130px;
-
 }
 
 .carousel-next {
@@ -278,8 +269,6 @@ align-self: center;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-
- 
 }
 
 .dot {
@@ -290,7 +279,7 @@ align-self: center;
   margin: 0 5px;
   cursor: pointer;
 }
-.carrousel-wrapper{
+.carrousel-wrapper {
   display: flex;
   flex-direction: column;
   height: 364px;
@@ -299,18 +288,18 @@ align-self: center;
   margin-top: 3rem;
   max-width: 100vw;
   overflow: hidden;
-  
+
   background-color: #2b2b2b;
 }
-.carrousel-wrapper svg{
+.carrousel-wrapper svg {
   fill: white;
   stroke-width: 1px;
   width: 1.4rem;
 }
-.carrousel-wrapper svg:hover{
-  fill:gray
+.carrousel-wrapper svg:hover {
+  fill: gray;
 }
-.carrousel-wrapper > h2{
+.carrousel-wrapper > h2 {
   color: rgb(218, 211, 211);
   margin-left: 2rem;
   max-width: 1020px;
@@ -320,21 +309,21 @@ align-self: center;
   font-size: 1.6rem;
 }
 
-.sponsors-slide{
+.sponsors-slide {
   align-self: center;
   max-width: 1020px;
   display: flex;
   margin-top: -7rem;
   justify-content: space-around;
   align-items: center;
-  
 }
-.FAQ{
+.FAQ {
   max-width: 1020px;
   margin: 0 auto;
   height: 500px;
+  
 }
-.FAQ-header{
+.FAQ-header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -342,95 +331,219 @@ align-self: center;
   color: white;
   justify-content: space-between;
 }
-.FAQ-header > span , .all-answers-span{
-  color:#0b90c0 ;
+.FAQ-header > span,
+.all-answers-span {
+  color: #0b90c0;
   font-weight: bold;
   font-size: 1.5rem;
   cursor: pointer;
   transition: 0.3s;
 }
-.FAQ-header > span:hover,.all-answers-span:hover{
+.FAQ-header > span:hover,
+.all-answers-span:hover {
   color: white;
 }
-.all-answers-span{
+.all-answers-span {
   display: none;
 }
 .FAQ-questions-wrapper {
-  color: white; 
-  
+  color: white;
 }
-.FAQ-questions-wrapper svg{
-  fill:white ;
+.FAQ ul{
+  list-style: none;
 }
-.FAQ-questions-wrapper details summary{
+.FAQ-questions-wrapper svg {
+  fill: white;
+}
+.FAQ-questions-wrapper details summary {
   transition: 0.3s;
   display: flex;
   justify-content: space-between;
   font-size: 1.5rem;
   margin: 2rem 0;
   cursor: pointer;
-}
-.FAQ-questions-wrapper details{
-  border-bottom: 1px solid gray;
-  transition:0.3s ease-in-out
+ 
 }
 
-details[open] svg{
-  height: auto; 
+.FAQ-questions-wrapper details {
+  border-bottom: 1px solid gray;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+}
+.dopdown-hidden-text {
+  
+  max-height: 1000px;
+}
+
+details:not([open]) > .dopdown-hidden-text  {
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+  
+}
+
+
+details .dopdown-hidden-text {
+  max-height: 1000px; 
+  transition: max-height 0.3s ease-in;
+  opacity: 0;
+  overflow: hidden;
+}
+details[open] .dopdown-hidden-text{
+  opacity: 1;
+  max-height: 1000px;
+  transition: max-height 0.3s ease-in, opacity 0.3s ease-in;
+
+}
+
+details[open] svg {
+  height: auto;
   rotate: 180deg;
 }
 
 summary::marker {
- display: block;
- 
+  display: block;
 }
-@media (max-width: 1024px) {
 
-  .FAQ{
-    width: 90vw;
-    /* padding-bottom: 2rem; */
-    margin:2rem;
+
+footer a{
+  color: white;
+  text-decoration: none;
+}
+footer a span{
+  display: block;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.message-us:hover{
+  background-color: white;
+  color: black;
+}
+footer{
+  width: 100vw;
+  background-color: #1a1e1f;
+  padding: 5rem 0;
+}
+.footer-wrapper {
+  
+  color: white;
+  max-width: 1020px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: 
+    'tbc . . . . . . . . . soc'
+    'rights . . . . . . . . .mes';
+  row-gap: 1rem ;
+}
+
+.tbc-logo {
+  grid-area: tbc;
+}
+
+.social-icons {
+  grid-area: soc;
+  
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+}
+
+.message-us {
+  grid-area: mes;
+  display: inline-block;
+  background-color: #00adee;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: 0.5s;
+  height: 70%;
+  align-self: flex-end;
+}
+
+.rights {
+  grid-area: rights;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.rights span:nth-child(2){
+  cursor: pointer;
+  transition: 0.3s;
+}
+.rights a{
+  cursor: pointer;
+}
+.rights span:nth-child(2):hover{
+  color: gray;
+}
+
+@media (max-width: 1024px) {
+  .footer-wrapper{
+
+    grid-template-areas:
+    'tbc . . .'
+    'mes soc . . '
+    'rights . . . ';
+    
+    padding-bottom: 2rem;
+    row-gap: 4rem;
   }
-  .FAQ-header >span{
+  .message-us{
+    justify-self: start;
+    scale: 1.2;
+  }
+  .tbc-logo{
+    scale: 1.2;
+  }
+  footer{
+    padding: 2rem;
+  }
+  .rights{
+    white-space: nowrap;
+    flex-direction: column-reverse;
+  }
+  .message-us{
+    height: 100%;
+  }
+  .FAQ {
+    width: 90vw;
+    margin: 2rem;
+    height: auto;
+  }
+  .FAQ-header > span {
     display: none;
   }
-  .FAQ-header >h2{
+  .FAQ-header > h2 {
     font-size: 1.7rem;
     font-weight: normal;
-    
   }
-  .all-answers-span{
+  .all-answers-span {
     display: inline-block;
     margin: 3rem 0;
     width: 100%;
     text-align: center;
   }
   .carousel-inner {
-    
     transition: transform 0.3s ease-in;
-   
   }
-  .carousel-item{
+  .carousel-item {
     min-width: 100%;
   }
-  .carousel-dots{
+  .carousel-dots {
     bottom: 0;
   }
-  .carrousel-wrapper svg{
+  .carrousel-wrapper svg {
     display: none;
   }
-  .carrousel-wrapper > h2{
+  .carrousel-wrapper > h2 {
     color: rgb(218, 211, 211);
     margin-left: 2rem;
-    
+
     align-self: unset;
     font-size: 1.6rem;
   }
-  .carrousel-wrapper{
-    
-    height:70vh;
+  .carrousel-wrapper {
+    height: 70vh;
   }
-  .sponsors-slide{
+  .sponsors-slide {
     display: flex;
     gap: 3rem;
     flex-direction: column;
@@ -439,56 +552,51 @@ summary::marker {
     margin-bottom: 5rem;
     width: 100vw;
   }
-  .sponsors-slide >img{
+  .sponsors-slide > img {
     display: flex;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
   }
-  .course-details-wrapper{
+  .course-details-wrapper {
     margin: 1rem 0;
-    
   }
-  
-  .our-courses{
+
+  .our-courses {
     width: 100vw;
     justify-content: center;
     align-items: center;
-    
   }
-  .our-courses h2{
+  .our-courses h2 {
     font-size: 2rem;
     justify-self: left;
   }
-  .course-wrapper{
+  .course-wrapper {
     display: grid;
     grid-template-columns: 90vw;
-    /* grid-template-rows:repeat(1,414px) ; */
     gap: 2rem;
   }
-  .project-info-wrapper-outer{
+  .project-info-wrapper-outer {
     padding: 3rem 1rem;
     padding-bottom: 3rem;
-    
   }
-  
-  .project-info-wrapper-inner{
+
+  .project-info-wrapper-inner {
     font-size: 0.9rem;
     word-spacing: 0.8;
   }
-  .project-info-wrapper-inner h1{
+  .project-info-wrapper-inner h1 {
     letter-spacing: normal;
-    font-weight:100;
+    font-weight: 100;
   }
-  .text-wrapper{
+  .text-wrapper {
     margin: 1rem;
     top: 40%;
-    
-    font-size: 1.3rem;
-  transform: translate(-50%, -50%);
 
+    font-size: 1.3rem;
+    transform: translate(-50%, -50%);
   }
-  main{
+  main {
     padding-top: 0px;
   }
   header {
@@ -502,7 +610,7 @@ summary::marker {
   .menu-button {
     display: flex;
   }
-  
+
   .header-content-wrapper {
     padding: 0 2rem;
     align-items: center;
