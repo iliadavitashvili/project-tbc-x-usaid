@@ -3,7 +3,6 @@ let screenWidth =
   document.documentElement.clientWidth ||
   document.body.clientWidth;
 
-  
 let mainImg = document.getElementById("main-image");
 const smallImg =
   "https://static.wixstatic.com/media/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg/v1/fill/w_619,h_420,al_c,q_80,enc_auto/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg";
@@ -12,7 +11,19 @@ const mediumImg =
 const largeImg =
   "https://static.wixstatic.com/media/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg/v1/fill/w_1920,h_166,al_c,q_80,enc_auto/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg";
 
+let coursesDiv = document.getElementById("courses-div");
 
+const bgWrapper = document.getElementById("bg-wrapper");
+
+const menuButton = document.getElementById("menu-button");
+
+const mbFirstLine = document.getElementById("line-1");
+const mbSecondLine = document.getElementById("line-2");
+const mbThirdLine = document.getElementById("line-3");
+const asideMenu = document.getElementById("aside-menu");
+let isMenuClicked = false;
+
+const lines = document.querySelectorAll(".line");
 
 function updateImage() {
   let screenWidth =
@@ -28,97 +39,82 @@ function updateImage() {
     mainImg.style.height = "352px";
   } else {
     mainImg.src = largeImg;
-    mainImg.style.height = ""; 
+    mainImg.style.height = "";
   }
 }
 
-
 updateImage();
 
-
 window.addEventListener("resize", updateImage);
+// responsive menu button click event down here
+menuButton.addEventListener("click", () => {
+  if (!isMenuClicked) {
+    document.body.style.overflow =
+      asideMenu.style.display === "none" ? "auto" : "hidden";
+    bgWrapper.style.opacity = "0.5";
+    asideMenu.style.transform = "translateX(0)";
+    mbFirstLine.style.transform =
+      "rotate(90deg) translateX(2px) translateY(-6px)";
+    menuButton.style.transform = "rotate(-45deg)";
+    mbThirdLine.style.transform =
+      "rotate(-90deg) translateX(2px) translateY(-6px)";
+    lines.forEach((item) => (item.style.backgroundColor = "gray"));
+  } else {
+    asideMenu.style.transform = "translateX(70vw)";
+    document.body.style.overflow =
+      asideMenu.style.display === "none" ? "hidden" : "auto";
 
-let coursesDiv = document.getElementById("courses-div")
-
-const bgWrapper = document.getElementById("bg-wrapper")
-
-const menuButton = document.getElementById("menu-button")
-
-const mbFirstLine = document.getElementById("line-1")
-const mbSecondLine = document.getElementById("line-2")
-const mbThirdLine = document.getElementById("line-3")
-const asideMenu = document.getElementById("aside-menu")
-let isMenuClicked = false
-
-const lines =document.querySelectorAll(".line") 
-
-menuButton.addEventListener("click",()=>{
-  if(!isMenuClicked){
-    document.body.style.overflow = (asideMenu.style.display === "none") ? "auto" : "hidden";
-    bgWrapper.style.opacity="0.5"
-    asideMenu.style.transform="translateX(0)"
-    mbFirstLine.style.transform= "rotate(90deg) translateX(2px) translateY(-6px)";
-  menuButton.style.transform ="rotate(-45deg)"
-  mbThirdLine.style.transform= "rotate(-90deg) translateX(2px) translateY(-6px)";
-  lines.forEach((item)=>item.style.backgroundColor ="gray")
-  }else{
-    asideMenu.style.transform="translateX(70vw)"
-    document.body.style.overflow = (asideMenu.style.display === "none") ? "hidden" : "auto";
-
-    bgWrapper.style.opacity="1"
-    lines.forEach(item => item.style.backgroundColor = "")
-    mbFirstLine.style.transform= "";
-  menuButton.style.transform =""
-  mbThirdLine.style.transform= "";
+    bgWrapper.style.opacity = "1";
+    lines.forEach((item) => (item.style.backgroundColor = ""));
+    mbFirstLine.style.transform = "";
+    menuButton.style.transform = "";
+    mbThirdLine.style.transform = "";
   }
-  isMenuClicked = !isMenuClicked
-})
-
-
-
-
-
+  isMenuClicked = !isMenuClicked;
+});
+// course elements added here 
 const coursesArray = [
   {
     img: "https://static.wixstatic.com/media/dd97f4_6f93a2a737b14a32ae26b17f51e6dbf1~mv2.jpg/v1/fill/w_300,h_150,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/dd97f4_6f93a2a737b14a32ae26b17f51e6dbf1~mv2.jpg",
-    name: "iOS Development"
+    name: "iOS Development",
   },
   {
     img: "https://static.wixstatic.com/media/dd97f4_4323db1079614633a653e2ff9a95738e~mv2.jpg/v1/fill/w_300,h_150,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/dd97f4_4323db1079614633a653e2ff9a95738e~mv2.jpg",
-    name: "React"
+    name: "React",
   },
   {
     img: "https://static.wixstatic.com/media/dd97f4_5487da3fc590472dbb3599f7575df2d1~mv2.jpg/v1/fill/w_300,h_150,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/dd97f4_5487da3fc590472dbb3599f7575df2d1~mv2.jpg",
-    name: "Intro to Python"
+    name: "Intro to Python",
   },
   {
     img: "https://static.wixstatic.com/media/dd97f4_d9e4b267142542e98dbcdf183d766651~mv2.jpg/v1/fill/w_300,h_150,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/dd97f4_d9e4b267142542e98dbcdf183d766651~mv2.jpg",
-    name: "Advanced Python"
+    name: "Advanced Python",
   },
   {
     img: "https://static.wixstatic.com/media/dd97f4_41969c5f1e6b4a269bf1d790a52e465b~mv2.jpg/v1/fill/w_300,h_150,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/dd97f4_41969c5f1e6b4a269bf1d790a52e465b~mv2.jpg",
-    name: "Advanced Cybersecurity Course"
+    name: "Advanced Cybersecurity Course",
   },
   {
     img: "https://static.wixstatic.com/media/dd97f4_dd355dc915d14264afd4ce2a9d2b0e12~mv2.jpg/v1/fill/w_300,h_150,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/dd97f4_dd355dc915d14264afd4ce2a9d2b0e12~mv2.jpg",
-    name: "ToT - Training of Trainers"
+    name: "ToT - Training of Trainers",
   },
   {
     img: "https://static.wixstatic.com/media/dd97f4_0fc678e4e2e04f8dacc747a4e2fbb6e6~mv2.jpg/v1/fill/w_300,h_150,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/dd97f4_0fc678e4e2e04f8dacc747a4e2fbb6e6~mv2.jpg",
-    name: "Blockchain"
+    name: "Blockchain",
   },
   {
     img: "https://static.wixstatic.com/media/dd97f4_dda966974c014319bd5623526510b47c~mv2.jpg/v1/fill/w_300,h_150,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/dd97f4_dda966974c014319bd5623526510b47c~mv2.jpg",
-    name: "DevOps"
+    name: "DevOps",
   },
   {
     img: "https://static.wixstatic.com/media/dd97f4_8cc30cf0258d45a6ad2298ebec33550a~mv2.jpg/v1/fill/w_300,h_150,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/dd97f4_8cc30cf0258d45a6ad2298ebec33550a~mv2.jpg",
-    name: "Information Security Governance"
+    name: "Information Security Governance",
   },
 ];
 
-let courses = coursesArray.map((course)=>{
-  return `<div class="course">
+let courses = coursesArray
+  .map((course) => {
+    return `<div class="course">
   <img
     src=${course.img}
   />
@@ -137,65 +133,68 @@ let courses = coursesArray.map((course)=>{
       <h3>კურსის დეტალები</h3>
     </div>
   </div>
-</div> `
-}).join(" ")
-coursesDiv.innerHTML = courses
-const inner = document.querySelector('.carousel-inner');
-    const items = document.querySelectorAll('.carousel-item');
-    const dots = document.querySelectorAll('.dot');
+</div> `;
+  })
+  .join(" ");
 
-    let currentIndex = 0;
-    let isPaused = false;
-    let autoAdvanceTimer;
 
-    function updateCarousel() {
-        const itemWidth = items[0].offsetWidth;
-        inner.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
-        updateDots();
+  // carousel code down here
+coursesDiv.innerHTML = courses;
+const inner = document.querySelector(".carousel-inner");
+const items = document.querySelectorAll(".carousel-item");
+const dots = document.querySelectorAll(".dot");
+
+let currentIndex = 0;
+let isPaused = false;
+let autoAdvanceTimer;
+
+function updateCarousel() {
+  const itemWidth = items[0].offsetWidth;
+  inner.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+  updateDots();
+}
+
+function changeSlide(direction) {
+  currentIndex = (currentIndex + direction + items.length) % items.length;
+  updateCarousel();
+  resetAutoAdvanceTimer();
+}
+
+function changeToDot(index) {
+  currentIndex = index;
+  updateCarousel();
+  resetAutoAdvanceTimer();
+}
+
+function pauseCarousel() {
+  isPaused = true;
+  clearTimeout(autoAdvanceTimer);
+}
+
+function resumeCarousel() {
+  isPaused = false;
+  resetAutoAdvanceTimer();
+}
+
+function autoAdvance() {
+  if (!isPaused) {
+    changeSlide(1);
+  }
+}
+
+function resetAutoAdvanceTimer() {
+  clearTimeout(autoAdvanceTimer);
+  autoAdvanceTimer = setTimeout(autoAdvance, 3000);
+}
+
+function updateDots() {
+  dots.forEach((dot, index) => {
+    if (index === currentIndex) {
+      dot.style.backgroundColor = "white";
+    } else {
+      dot.style.backgroundColor = "gray";
     }
+  });
+}
 
-    function changeSlide(direction) {
-        currentIndex = (currentIndex + direction + items.length) % items.length;
-        updateCarousel();
-        resetAutoAdvanceTimer();
-    }
-
-    function changeToDot(index) {
-        currentIndex = index;
-        updateCarousel();
-        resetAutoAdvanceTimer();
-    }
-
-    function pauseCarousel() {
-        isPaused = true;
-        clearTimeout(autoAdvanceTimer);
-    }
-
-    function resumeCarousel() {
-        isPaused = false;
-        resetAutoAdvanceTimer();
-    }
-
-    function autoAdvance() {
-        if (!isPaused) {
-            changeSlide(1);
-        }
-    }
-
-    function resetAutoAdvanceTimer() {
-        clearTimeout(autoAdvanceTimer);
-        autoAdvanceTimer = setTimeout(autoAdvance, 3000);
-    }
-
-    function updateDots() {
-        dots.forEach((dot, index) => {
-            if (index === currentIndex) {
-                dot.style.backgroundColor = 'white';
-            } else {
-                dot.style.backgroundColor = 'gray';
-            }
-        });
-    }
-
-    resetAutoAdvanceTimer();
-
+resetAutoAdvanceTimer();
