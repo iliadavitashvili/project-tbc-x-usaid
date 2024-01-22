@@ -90,16 +90,7 @@ header li:hover {
   font-size: 1.1rem;
   margin-top: 7rem;
 }
-#menu-button-2{
-  position: absolute;
-  display: none;
-  transition: 0.3s;
-  top: 2.5rem;
-  z-index: 900;
-}
-#menu-button-2 div{
-  background-color: gray;
-}
+
 .menu-button {
   width: 26px;
   height: 21px;

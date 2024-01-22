@@ -17,6 +17,7 @@ const bgWrapper = document.getElementById("bg-wrapper");
 
 const menuButton = document.getElementById("menu-button");
 
+
 const mbFirstLine = document.getElementById("line-1");
 const mbSecondLine = document.getElementById("line-2");
 const mbThirdLine = document.getElementById("line-3");
@@ -41,6 +42,7 @@ function updateImage() {
     mainImg.src = largeImg;
     mainImg.style.height = "";
   }
+  
 }
 
 updateImage();
